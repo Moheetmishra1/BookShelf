@@ -17,13 +17,13 @@ import "../../CSS/BookCart.css"
     return (
         <div className="bookCartBox">
            <div> <span>Title</span>: {title}</div>
-           <div><span>Author</span>: {author_name[0]}</div>
+          <div><span>Author</span>: {author_name && author_name[0]}</div>
 
-           <div><span>Lang</span>: {language.slice(1,3)}</div>
+           <div><span>Lang</span>: {language && language.slice(1,3)}</div>
 
-           <div><span>Publisher</span>: {publisher[0]}</div>
-           <div><span>Publish</span>: {publish_date[publish_date.length-1]}</div>
-           <div><span>Subject</span>: {subject.slice(0,2)}</div>
+           <div><span>Publisher</span>: {publisher && publisher[0]}</div>
+           <div><span>Publish</span>: {publish_date && publish_date[publish_date.length-1]}</div>
+           <div><span>Subject</span>: {subject && subject.slice(0,2)}</div>
            <div><span>Rate</span>: {ratings_average}</div>
 
            {add&&<button className="addCart" onClick={addCart}><p>Add to cart</p> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
